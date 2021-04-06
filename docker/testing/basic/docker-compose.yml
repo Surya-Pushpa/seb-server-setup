@@ -67,6 +67,8 @@ services:
       - "seb-server"
       - "seb-server-setup"
     restart: unless-stopped
+    environment:
+       - "SPRING_PROFILES_ACTIVE=test"
 
 networks:
   seb-server-network:
